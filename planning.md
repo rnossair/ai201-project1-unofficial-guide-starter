@@ -11,7 +11,7 @@
 
 <!-- What domain did you choose? Why is this knowledge valuable and hard to find through official channels? -->
 
----
+--- Grinnell Dorm Culture and Self Governance, information is really scattered across different sources and perpsectives/opinions, and its an integral part of life on campus
 
 ## Documents
 
@@ -20,16 +20,16 @@
 
 | # | Source | Description | URL or location |
 |---|--------|-------------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
+| 1 | r/Grinnell | What are dorms like? | https://www.reddit.com/r/Grinnell/comments/n4po1g/what_are_the_different_dorm_buildings_on_campus/ |
+| 2 | Grinnell Website | Self Gov 101 | https://www.grinnell.edu/news/self-gov-101 |
+| 3 | Grinnell Website | Self Defining Self Governance | https://www.grinnell.edu/news/self-defining-self-governance |
+| 4 | Scarlet & Black (Student Newspaper) | | https://thesandb.com/39417/article/self-gov-is-dead-did-it-ever-exist-anyway/ |
+| 5 | Grinnell Student Handbook | Self Gov at Grinnell| https://catalog.grinnell.edu/content.php?catoid=32&navoid=5205#self-governance_at_grinnell_college |
+| 6 | Grinnell Website | Residence Halls | https://www.grinnell.edu/campus-life/student-life/living-spaces/residence-halls |
+| 7 | r/Grinnell | Social life @ Grinnell | https://www.reddit.com/r/Grinnell/comments/xgbnuo/hows_the_social_life/ |
+| 8 | Grinnell Website | Student Organization | https://www.grinnell.edu/life/organizations |
+| 9 | Scarlet & Black (Student Newspaper) | Nightlife at Grinnell | https://thesandb.com/38899/article/nightlife-in-the-prairie/ |
+| 10 | Scarlet & Black (Student Newspaper) | Different vibes of each campus cluster | https://thesandb.com/46692/article/student-speaks-dorm-hall-defense/ |
 
 ---
 
@@ -40,9 +40,9 @@
      numbers fit the structure of your documents.
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
-**Chunk size:**
+**Chunk size:*250*
 
-**Overlap:**
+**Overlap:*50*
 
 **Reasoning:**
 
@@ -56,9 +56,9 @@
      would you weigh in choosing a different embedding model — context length, multilingual
      support, accuracy on domain-specific text, latency? -->
 
-**Embedding model:**
+**Embedding model: all-MiniLM-L6-v2 via sentence-transformers**
 
-**Top-k:**
+**Top-k: 6**
 
 **Production tradeoff reflection:**
 
