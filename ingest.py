@@ -2,7 +2,8 @@
 Milestone 3: Document ingestion, cleaning, and chunking.
 
 Loads all 10 sources from planning.md, cleans the text, and produces
-overlapping word-based chunks (chunk_size=250, overlap=50).
+overlapping character-based chunks (chunk_size=1000, overlap=150)
+using LangChain's RecursiveCharacterTextSplitter.
 Saves chunks to documents/chunks.json for the embedding stage.
 
 Source 5 (Grinnell Student Handbook) is expected as a local PDF at:
@@ -18,9 +19,16 @@ from pathlib import Path
 import pdfplumber
 import requests
 from bs4 import BeautifulSoup
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-CHUNK_SIZE = 200  # words
-OVERLAP = 35      # words
+CHUNK_SIZE = 1000  # characters
+OVERLAP = 150      # characters
+
+text_splitter = RecursiveCharacterTextSplitter(
+    chunk_size=CHUNK_SIZE,
+    chunk_overlap=OVERLAP,
+    separators=["\n\n", "\n", ".", " ", ""],
+)
 
 SOURCES = [
     {
@@ -198,20 +206,6 @@ def clean_text(text: str) -> str:
     return text.strip()
 
 
-def chunk_text(text: str, chunk_size: int = CHUNK_SIZE, overlap: int = OVERLAP) -> list[str]:
-    words = text.split()
-    chunks: list[str] = []
-    start = 0
-    while start < len(words):
-        end = start + chunk_size
-        chunk = " ".join(words[start:end]).strip()
-        if chunk:
-            chunks.append(chunk)
-        if end >= len(words):
-            break
-        start = end - overlap
-    return chunks
-
 
 def load_source(source: dict) -> list[dict]:
     src_type = source["type"]
@@ -250,8 +244,8 @@ def load_source(source: dict) -> list[dict]:
         print("       WARNING: no text extracted")
         return []
 
-    chunks = chunk_text(cleaned)
-    print(f"       {len(cleaned.split())} words -> {len(chunks)} chunks")
+    chunks = text_splitter.split_text(cleaned)
+    print(f"       {len(cleaned)} chars -> {len(chunks)} chunks")
 
     return [
         {
@@ -281,7 +275,7 @@ def main() -> None:
     out_path.write_text(json.dumps(all_chunks, indent=2, ensure_ascii=False), encoding="utf-8")
 
     print(f"\nDone. {len(all_chunks)} total chunks saved to {out_path}")
-    print(f"Chunk size: {CHUNK_SIZE} words | Overlap: {OVERLAP} words")
+    print(f"Chunk size: {CHUNK_SIZE} chars | Overlap: {OVERLAP} chars")
 
 
 if __name__ == "__main__":

@@ -29,7 +29,8 @@
 | 7 | Grinnell Website | Off-Campus Study in CS | https://www.grinnell.edu/academics/majors-concentrations/computer-science/off-campus |
 | 8 | Grinnell Website | CS Opportunities | https://www.grinnell.edu/academics/majors-concentrations/computer-science/opportunities |
 | 9 | r/Iowa | is Grinnell good for CS? | https://www.reddit.com/r/Iowa/comments/1062qs6/is_grinnell_college_decent_for_comp_sci/ |
-| 10 | explorebestcolleges | CS at Grinnell Overview | https://www.explorebestcolleges.com/degrees/l/24262/grinnell-college-computer-science-bachelors-degree |
+| 10 | r/Grinnell | CS at Grinnell | https://www.reddit.com/r/Grinnell/comments/8aeyvl/what_is_the_cs_program_like/ |
+
 
 ---
 
@@ -42,7 +43,7 @@
 
 **Chunk size:**200
 
-**Overlap:**30
+**Overlap:**
 
 **Reasoning:** Due to the mix of shorter and longer styled paragraphs between the different types of sources we have (reddit threads and newspaper articles) This felt like a good enough balance.
 
@@ -73,11 +74,11 @@
 
 | # | Question | Expected answer |
 |---|----------|-----------------|
-| 1 | What do students think about activities in town? | Town doesn't have much to do but there are organizations on campus|
-| 2 | What campus should I live on if i value quiet? | East campus is known as the quietest.|
+| 1 | What are the strict limitations regarding taking classes outside of Grinnell College when trying to satisfy the 16 required credits for systems, theory, and software development? | No more thqn 4 credits can be taken out of 16 |
+| 2 | For graduation with honors, what roles can i take to fulfill commitment to the department? | Serving on SEPC, working as a peer educator...|
 | 3 | I'm moving off-campus next year. Which specific houses or landlords are known for having terrible mold problems?| I don't have the necessary information to answer|
 | 4 | I'm not really into loud drinking parties and I know we don't have Greek life. If I live in one of the quieter dorms, is it still easy to find a solid community here, or does the social scene end up feeling really isolating? | It is definitely possible to find a solid community, but it requires a bit of deliberate effort.|
-| 5 | I'm trying to figure out the party scene before I commit. Which fraternities or sororities are the best to join at Grinnell, and where are their houses located? | Grinnell has no greek life. |
+| 5 | Grinnell offers a cooperative Master of Computer Science (M.C.S.) degree. Which university is it partnered with, and when do students need to apply for it? | It is partnered with the University of Iowa and students apply in their second semester of junior year.
 
 ---
 
