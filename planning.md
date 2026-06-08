@@ -40,11 +40,11 @@
      numbers fit the structure of your documents.
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
-**Chunk size:*250*
+**Chunk size:**250
 
-**Overlap:*50*
+**Overlap:**50
 
-**Reasoning:**
+**Reasoning:** Due to the mix of shorter and longer styled paragraphs between the different types of sources we have (reddit threads and newspaper articles) This felt like a good enough balance.
 
 ---
 
@@ -60,7 +60,7 @@
 
 **Top-k: 6**
 
-**Production tradeoff reflection:**
+**Production tradeoff reflection:** I would most probably be weighing in context-length and latency first and foremost; Multilingual support is not a priority due to the college requiring English proficiency to enroll. 
 
 ---
 
@@ -73,11 +73,11 @@
 
 | # | Question | Expected answer |
 |---|----------|-----------------|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
+| 1 | What do students think about activities in town? | Town doesn't have much to do but there are organizations on campus|
+| 2 | What campus should I live on if i value quiet? | East campus is known as the quietest.|
+| 3 | I'm moving off-campus next year. Which specific houses or landlords are known for having terrible mold problems?| I don't have the necessary information to answer|
+| 4 | I'm not really into loud drinking parties and I know we don't have Greek life. If I live in one of the quieter dorms, is it still easy to find a solid community here, or does the social scene end up feeling really isolating? | It is definitely possible to find a solid community, but it requires a bit of deliberate effort.|
+| 5 | I'm trying to figure out the party scene before I commit. Which fraternities or sororities are the best to join at Grinnell, and where are their houses located? | Grinnell has no greek life. |
 
 ---
 
@@ -87,9 +87,9 @@
      Consider: noisy or inconsistent documents, missing source attribution, off-topic
      retrieval, chunks that split key information across boundaries. -->
 
-1.
+1. Information split across two different chunks due to differing source structures (reddit thread vs newspaper article)
 
-2.
+2. Incorrect/Obsolete information due to some age of the sources.
 
 ---
 
@@ -102,6 +102,7 @@
      You'll use this diagram as context when prompting AI tools to implement each stage. -->
 
 ---
+![Document Ingestion Pipeline flow](<Document Ingestion Flow-2026-06-07-235643.png>)
 
 ## AI Tool Plan
 
@@ -117,6 +118,12 @@
 
 **Milestone 3 — Ingestion and chunking:**
 
+I'll describe my document ingestion pipeline to claude, before asking it to implement a function chunk_text() using the specified chunk size and overlap
+
 **Milestone 4 — Embedding and retrieval:**
 
+I will ask Claude to implement an embed function with our chosen embedding model, and storing it within a chromaDB vector database. I will follow it up with a prompt to create a retrieval function.
+
 **Milestone 5 — Generation and interface:**
+
+I will be asking Claude to set up a barebones front-end UI with a chatbox, and connecting said UI to our backend, where our Groq model will retrieve the relevant information to answer with 
