@@ -84,7 +84,13 @@ SOURCES = [
         "url": "https://old.reddit.com/r/Iowa/comments/1062qs6/is_grinnell_college_decent_for_comp_sci/",
         "type": "reddit",
         "description": "r/Iowa: is Grinnell good for CS?",
-    }
+    },
+    {
+        "id": 10,
+        "url": "https://old.reddit.com/r/Grinnell/comments/8aeyvl/what_is_the_cs_program_like/",
+        "type": "reddit",
+        "description": "r/Grinnell: CS at Grinnell",
+    },
 ]
 
 _HEADERS = {
