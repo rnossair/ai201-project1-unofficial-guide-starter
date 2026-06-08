@@ -19,70 +19,64 @@ import pdfplumber
 import requests
 from bs4 import BeautifulSoup
 
-CHUNK_SIZE = 250  # words
-OVERLAP = 50      # words
+CHUNK_SIZE = 200  # words
+OVERLAP = 35      # words
 
 SOURCES = [
     {
         "id": 1,
-        "url": "https://old.reddit.com/r/Grinnell/comments/n4po1g/what_are_the_different_dorm_buildings_on_campus/",
-        "type": "reddit",
-        "description": "r/Grinnell: What are the different dorm buildings on campus?",
+        "url": "https://www.ratemyprofessors.com/professor/2063467",
+        "type": "rmp",
+        "description": "RateMyProfessor: Prof Osera Review",
     },
     {
         "id": 2,
-        "url": "https://www.grinnell.edu/news/self-gov-101",
-        "type": "web",
-        "description": "Grinnell Website: Self Gov 101",
+        "path": "documents/CSCourses.txt",
+        "type": "txt",
+        "description": "Grinnell Website: Major Requirements",
     },
     {
         "id": 3,
-        "url": "https://www.grinnell.edu/news/self-defining-self-governance",
-        "type": "web",
-        "description": "Grinnell Website: Self-Defining Self-Governance",
+        "url": "https://www.ratemyprofessors.com/professor/2947551",
+        "type": "rmp",
+        "description": "RateMyProfessor: Prof Perlmutter",
     },
     {
         "id": 4,
-        "url": "https://thesandb.com/39417/article/self-gov-is-dead-did-it-ever-exist-anyway/",
-        "type": "sandb",
-        "description": "Scarlet & Black: Self-Gov Is Dead — Did It Ever Exist Anyway?",
+        "url": "https://www.ratemyprofessors.com/professor/148487",
+        "type": "rmp",
+        "description": "RateMyProfessor: Prof Sam Rebelsky",
     },
     {
         "id": 5,
-        "path": "documents/grinnell_self_governance.pdf",
-        "type": "pdf",
-        "description": "Grinnell Student Handbook: Self-Governance at Grinnell College",
+        "url": "https://www.ratemyprofessors.com/professor/2103075",
+        "type": "rmp",
+        "description": "RateMyProfessor: Prof Curtsinger",
     },
     {
         "id": 6,
-        "url": "https://www.grinnell.edu/campus-life/student-life/living-spaces/residence-halls",
-        "type": "web",
-        "description": "Grinnell Website: Residence Halls",
+        "url": "https://www.ratemyprofessors.com/professor/1349052",
+        "type": "rmp",
+        "description": "RateMyProfessor: Prof Weinmann",
     },
     {
         "id": 7,
-        "url": "https://old.reddit.com/r/Grinnell/comments/xgbnuo/hows_the_social_life/",
-        "type": "reddit",
-        "description": "r/Grinnell: How's the social life?",
+        "url": "https://www.grinnell.edu/academics/majors-concentrations/computer-science/off-campus",
+        "type": "web",
+        "description": "Grinnell Website: Off-Campus Study in CS",
     },
     {
         "id": 8,
-        "url": "https://www.grinnell.edu/life/organizations",
+        "url": "https://www.grinnell.edu/academics/majors-concentrations/computer-science/opportunities",
         "type": "web",
-        "description": "Grinnell Website: Student Organizations",
+        "description": "Grinnell Website: CS Opportunities",
     },
     {
         "id": 9,
-        "url": "https://thesandb.com/38899/article/nightlife-in-the-prairie/",
-        "type": "sandb",
-        "description": "Scarlet & Black: Nightlife in the Prairie",
-    },
-    {
-        "id": 10,
-        "url": "https://thesandb.com/46692/article/student-speaks-dorm-hall-defense/",
-        "type": "sandb",
-        "description": "Scarlet & Black: Student Speaks — Dorm Hall Defense",
-    },
+        "url": "https://old.reddit.com/r/Iowa/comments/1062qs6/is_grinnell_college_decent_for_comp_sci/",
+        "type": "reddit",
+        "description": "r/Iowa: is Grinnell good for CS?",
+    }
 ]
 
 _HEADERS = {
@@ -132,7 +126,32 @@ def fetch_sandb(url: str) -> str:
         tag.decompose()
     return body.get_text(separator=" ", strip=True)
 
-
+def fetch_rmp(url: str) -> str:
+    """Target and extract full individual review content blocks from RateMyProfessors."""
+    resp = requests.get(url, headers=_HEADERS, timeout=15)
+    resp.raise_for_status()
+    soup = BeautifulSoup(resp.text, "html.parser")
+    
+    reviews: list[str] = []
+    
+    # Locate all parent rating block containers on the page
+    rating_blocks = soup.find_all("div", class_=re.compile(r"Rating__StyledRating", re.I))
+    
+    for block in rating_blocks:
+        # 1. Grab the student's text comment card content
+        comment_div = block.find("div", class_=re.compile(r"Comments__StyledComments", re.I))
+        comment_text = comment_div.get_text(strip=True) if comment_div else ""
+        
+        # 2. Grab the specific course metadata tag (e.g., "CSC151") to anchor context
+        course_div = block.find("div", class_=re.compile(r"RatingHeader__StyledClass", re.I))
+        course_text = course_div.get_text(strip=True) if course_div else "General"
+        
+        # 3. Clean up and assemble the data string for this review block
+        if comment_text:
+            reviews.append(f"Course: {course_text}. Review: {comment_text}")
+            
+    return "\n\n".join(reviews)
+    
 def fetch_web(url: str) -> str:
     resp = requests.get(url, headers=_HEADERS, timeout=15)
     resp.raise_for_status()
@@ -161,6 +180,13 @@ def fetch_pdf(path: str) -> str:
             if text:
                 pages.append(text)
     return "\n\n".join(pages)
+
+
+def fetch_txt(path: str) -> str:
+    p = Path(path)
+    if not p.exists():
+        raise FileNotFoundError(f"Text file not found: {path}")
+    return p.read_text(encoding="utf-8")
 
 
 def clean_text(text: str) -> str:
@@ -197,11 +223,17 @@ def load_source(source: dict) -> list[dict]:
         if src_type == "reddit":
             raw = fetch_reddit(source["url"])
             location = source["url"]
+        elif src_type == "rmp":
+            raw = fetch_rmp(source["url"])
+            location = source["url"]
         elif src_type == "sandb":
             raw = fetch_sandb(source["url"])
             location = source["url"]
         elif src_type == "pdf":
             raw = fetch_pdf(source["path"])
+            location = source["path"]
+        elif src_type == "txt":
+            raw = fetch_txt(source["path"])
             location = source["path"]
         else:
             raw = fetch_web(source["url"])

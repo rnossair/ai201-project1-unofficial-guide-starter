@@ -11,7 +11,7 @@
 
 <!-- What domain did you choose? Why is this knowledge valuable and hard to find through official channels? -->
 
---- Grinnell Dorm Culture and Self Governance, information is really scattered across different sources and perpsectives/opinions, and its an integral part of life on campus
+--- The Computer Science experience at Grinnell College, information is really scattered across different sources and perpsectives/opinions, and can be quite confusing to gather for incoming sutdents. 
 
 ## Documents
 
@@ -20,16 +20,16 @@
 
 | # | Source | Description | URL or location |
 |---|--------|-------------|-----------------|
-| 1 | r/Grinnell | What are dorms like? | https://www.reddit.com/r/Grinnell/comments/n4po1g/what_are_the_different_dorm_buildings_on_campus/ |
-| 2 | Grinnell Website | Self Gov 101 | https://www.grinnell.edu/news/self-gov-101 |
-| 3 | Grinnell Website | Self Defining Self Governance | https://www.grinnell.edu/news/self-defining-self-governance |
-| 4 | Scarlet & Black (Student Newspaper) | | https://thesandb.com/39417/article/self-gov-is-dead-did-it-ever-exist-anyway/ |
-| 5 | Grinnell Student Handbook | Self Gov at Grinnell| https://catalog.grinnell.edu/content.php?catoid=32&navoid=5205#self-governance_at_grinnell_college |
-| 6 | Grinnell Website | Residence Halls | https://www.grinnell.edu/campus-life/student-life/living-spaces/residence-halls |
-| 7 | r/Grinnell | Social life @ Grinnell | https://www.reddit.com/r/Grinnell/comments/xgbnuo/hows_the_social_life/ |
-| 8 | Grinnell Website | Student Organization | https://www.grinnell.edu/life/organizations |
-| 9 | Scarlet & Black (Student Newspaper) | Nightlife at Grinnell | https://thesandb.com/38899/article/nightlife-in-the-prairie/ |
-| 10 | Scarlet & Black (Student Newspaper) | Different vibes of each campus cluster | https://thesandb.com/46692/article/student-speaks-dorm-hall-defense/ |
+| 1 | RateMyProfessor | Pr. Osera Review | https://www.ratemyprofessors.com/professor/2063467 |
+| 2 | Grinnell Website | Major Requirements | ./documents/CSCourses.txt |
+| 3 | RateMyProfessor | Prof Perlmutter | https://www.ratemyprofessors.com/professor/2947551 |
+| 4 | RateMyProfessor | Prof Sam Rebelsky | https://www.ratemyprofessors.com/professor/148487 |
+| 5 | RateMyProfessor | Prof Curtsinger| https://www.ratemyprofessors.com/professor/2103075 |
+| 6 | RateMyProfessor | Prof Weinmann | https://www.ratemyprofessors.com/professor/1349052 |
+| 7 | Grinnell Website | Off-Campus Study in CS | https://www.grinnell.edu/academics/majors-concentrations/computer-science/off-campus |
+| 8 | Grinnell Website | CS Opportunities | https://www.grinnell.edu/academics/majors-concentrations/computer-science/opportunities |
+| 9 | r/Iowa | is Grinnell good for CS? | https://www.reddit.com/r/Iowa/comments/1062qs6/is_grinnell_college_decent_for_comp_sci/ |
+| 10 | explorebestcolleges | CS at Grinnell Overview | https://www.explorebestcolleges.com/degrees/l/24262/grinnell-college-computer-science-bachelors-degree |
 
 ---
 
@@ -40,9 +40,9 @@
      numbers fit the structure of your documents.
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
-**Chunk size:**250
+**Chunk size:**200
 
-**Overlap:**50
+**Overlap:**30
 
 **Reasoning:** Due to the mix of shorter and longer styled paragraphs between the different types of sources we have (reddit threads and newspaper articles) This felt like a good enough balance.
 
@@ -102,7 +102,7 @@
      You'll use this diagram as context when prompting AI tools to implement each stage. -->
 
 ---
-![Document Ingestion Pipeline flow](<Document Ingestion Flow-2026-06-07-235643.png>)
+![Document Ingestion Pipeline flow](<Document Ingestion Flow-2026-06-08-123103.png>)
 
 ## AI Tool Plan
 

@@ -1,0 +1,61 @@
+People use computers because they can provide services and help in the solving of problems. Thus, many courses and much research throughout the College utilize various aspects of computing.
+
+The discipline of computer science includes all aspects of the effective design and use of computer systems. Core areas within the undergraduate curriculum include multiple views of problem-solving, hardware design, operating systems, data organization (structure) and processing (algorithms), software design, programming languages, and the theory of computation. Some topics, such as networks and security, explore elements of computer systems in more detail, while other areas, such as artificial intelligence, computational linguistics, human-computer interactions, and computer vision, integrate computer science with interdisciplinary studies.
+
+Formal coursework is concentrated within the Department of Computer Science. Introductory courses emphasize multiple views of problem-solving, each with a different supporting computer programming language. The curriculum emphasizes basic concepts and fundamental techniques and makes extensive use of a local-area network that includes about 170 workstations and eight servers. Our outstanding facilities include several computer-equipped classrooms, an open lab, and convenient study and tutoring areas.
+
+The computer science major prepares students for careers in computer science, in the use of computing in other disciplines, in teaching, or in other professions. The curriculum is strongly influenced by recommendations of such national/international professional bodies as the Association for Computer Machinery (ACM), the Computer Society of the Institute of Electrical and Electronics Engineers (IEEE-CS), the American Association for the Advancement of Artificial Intelligence (AAAI), and the Liberal Arts Computer Science Consortium. Students regularly supplement this formal coursework with independent projects, internships, and student-faculty research. Students often work with faculty throughout the College on a variety of special projects that involve computing.
+
+Major Requirements: A minimum of 32 credits
+Multi-paradigm, Introductory Sequence: 12 credits
+CSC 151 - Functional Problem Solving with Lab
+CSC 161 - Imperative Problem Solving with Lab
+CSC 207 - Object-Oriented Problem Solving, Data Structures, and Algorithms
+Systems: 4 credits required, 8 credits recommended
+CSC 211 - Computer Organization and Architecture
+or
+CSC 213 - Operating Systems and Parallel Algorithms
+Upper-Level Theory: 8 credits
+CSC 301 - Analysis of Algorithms
+CSC 341 - Automata, Formal Languages, and Computational Complexity
+Software Development: 4 credits
+CSC 324 - Software Design and Development with Lab
+Electives: 4 credits
+4 credits in Computer Science at the 200-level or higher
+CSC 281, CSC 282, guided reading, independent study, directed research, and MAPs may not be used to fulfill Elective requirement.
+Up to 2 credits of CSC 326 may contribute toward satisfying the Elective requirement.
+If both CSC 211 and CSC 213 are taken, one may be used to satisfy the Elective requirement. 
+Also required:
+One course from the list below:
+MAT 208 - Discrete Structures 
+or
+CSC 208 - Discrete Structures 
+or
+MAT 218 - Discrete Bridges to Advanced Mathematics 
+Math elective: a math course numbered above MAT 131 - Calculus I, or any statistics course creditable toward the Mathematics major
+Additional Information:
+Computer Science courses numbered below 151 do not satisfy major requirements.
+No more than 4 credits taken outside of Grinnell may be counted towards the 16 required credits for systems, upper-level theory, and software development.
+Since technology has the potential and promise for significant impact, all majors are encouraged to take courses that help them understand the experiences of people different from themselves, such as foundation courses in Sociology or Gender, Women's, and Sexuality Studies. Such classes will also improve students's ability to work with others.
+Computer Science students must complete at least 20 credits of CSC coursework creditable towards the major at Grinnell College to satisfy major requirements.
+Each major is encouraged to take statistics (STA 209, MAT 335, STA 335, MAT 336, or STA 336) and a course in technology and society (such as a foundation course in Digital Studies or Science, Medicine and Society).
+Students considering a career in computing are encouraged to participate in an independent project, internship, or research experience.
+Students planning to work in industry should explore one or more other disciplines that use computing in a significant way.
+Each major should consult with the computer science faculty to select course options and electives that fit the student's particular interests.
+Honors
+To be considered for honors in computer science, graduating seniors, in addition to meeting the College's general requirements for honors, must also demonstrate exceptional commitment to the discipline and its values, as evidenced by significant engagement in the department and excellence in computing-related work, both in the classroom and beyond. 
+
+The Department considers students' work in four areas when making decisions about honors. The examples below are not exhaustive but should help to clarify how the Department makes determinations for honors.
+
+Students demonstrate excellence in the classroom through their work in our courses. Meeting the College's GPA requirement for honors satisfies this criterion.
+Students demonstrate excellence beyond the classroom through work they complete during a MAP, an internship, another research experience, or other impact full project. The Department asks honors-eligible students to present this work for evaluation at a poster session, typically during their senior year.
+Students demonstrate commitment to the department by serving on SEPC, working as a peer educator (for multiple semesters in some roles), mentoring students in the CPUs program, or through other official roles in the department.
+Students demonstrate commitment to the discipline by taking more than the minimal computer science major courses. The Department has waived this requirement when enrollment pressures make it especially difficult for computer science students to take courses beyond those required for the major. 
+Computer Science Major to meet international curricular guidelines:
+Periodically, the Association for Computer Machinery (ACM), the Computer Society of the Institute of Electrical and Electronics Engineers (IEEE-CS), and the Association for the Advancement of Artificial Intelligence (AAAI), publish recommendations for undergraduate computer science programs. To meet the most recent recommendations (published in 2023), students interested in careers in computing are advised that the following courses should be taken either as Electives for the Computer Science Major or as additional courses:
+
+CSC 211 - Computer Organization and Architecture
+CSC 213 - Operating Systems and Parallel Algorithms
+CSC 214 - Computer and Network Security
+CSC 216 - Computer Networks
+CSC 312 - Programming Language Implementation
