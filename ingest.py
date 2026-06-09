@@ -91,6 +91,12 @@ SOURCES = [
         "type": "reddit",
         "description": "r/Grinnell: CS at Grinnell",
     },
+    {
+        "id": 11,
+        "path": "documents/explorebestcolleges.txt",
+        "type": "txt",
+        "description": "explorebestcolleges: CS at Grinnell Overview",
+    },
 ]
 
 _HEADERS = {

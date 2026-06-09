@@ -41,9 +41,9 @@
      numbers fit the structure of your documents.
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
-**Chunk size:**200
+**Chunk size:** 200 
 
-**Overlap:**
+**Overlap:** 30
 
 **Reasoning:** Due to the mix of shorter and longer styled paragraphs between the different types of sources we have (reddit threads and newspaper articles) This felt like a good enough balance.
 
@@ -76,8 +76,8 @@
 |---|----------|-----------------|
 | 1 | What are the strict limitations regarding taking classes outside of Grinnell College when trying to satisfy the 16 required credits for systems, theory, and software development? | No more thqn 4 credits can be taken out of 16 |
 | 2 | For graduation with honors, what roles can i take to fulfill commitment to the department? | Serving on SEPC, working as a peer educator...|
-| 3 | I'm moving off-campus next year. Which specific houses or landlords are known for having terrible mold problems?| I don't have the necessary information to answer|
-| 4 | I'm not really into loud drinking parties and I know we don't have Greek life. If I live in one of the quieter dorms, is it still easy to find a solid community here, or does the social scene end up feeling really isolating? | It is definitely possible to find a solid community, but it requires a bit of deliberate effort.|
+| 3 | I'm moving off-campus next year. Which specific houses or landlords are known for having terrible mold problems?| I don't have the necessary information to answer |
+| 4 | Which professor has the best teaching experience with CSC-151 according to students? | Should be Osera or Rebelsky.|
 | 5 | Grinnell offers a cooperative Master of Computer Science (M.C.S.) degree. Which university is it partnered with, and when do students need to apply for it? | It is partnered with the University of Iowa and students apply in their second semester of junior year.
 
 ---
